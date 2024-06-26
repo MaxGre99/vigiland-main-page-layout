@@ -1,0 +1,185 @@
+.wrapper-background {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  width: auto;
+  min-height: 100vh;
+  height: auto;
+  background: url('../../public/background.png') center;
+  background-size: cover;
+}
+
+.wrapper-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 0;
+}
+
+.header {
+width: 100%;
+display: flex;
+gap: 120px;
+}
+
+.logo {
+	font-family: 'Caros', sans-serif;
+  /* !!!!!!!!!!!!!!!!!!!!! */
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-toggle-custom {
+  background-color: #00FFD0 !important;
+  border: none !important;
+}
+
+.navbar-brand img {
+  display: inline-block;
+  align-self: top;
+	margin: 15px;
+  width: 32px;
+  height: 31px;
+}
+
+.navbar-brand span {
+	color: white;
+}
+
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+.navbar-collapse .nav-link {
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	padding: 11px;
+	margin: 10px;
+  border: 3px solid transparent;
+}
+
+.links > a:hover {
+  color: white;
+  border-bottom: 3px solid #00FFD0;
+}
+
+.signUpAndLang {
+  align-items: center;
+  color: #000433;
+}
+
+.bi-person {
+  font-size: 24px !important;
+  margin-right: 8px;
+  color: #000433;
+}
+
+@media (min-width: 800px) {
+  .signUpButton {
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .signUpButton {
+    align-items: center;
+    justify-content: center;
+    margin: 42px 21px;
+    border-radius: 8px !important;
+  }
+}
+
+.gradient-button {
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, #00FFD0 100%) !important; 
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.signUpText {
+  font-weight: bold;
+  color: #000433;
+}
+
+.dropdown-toggle {
+  color: #000433 !important;
+}
+
+
+main {
+  z-index: 10;
+  position: relative;
+  height: 90%;
+}
+
+.description {
+  gap: 10px;
+  flex-direction: column;
+  padding-top: 15%;
+}
+
+.description h6 {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 800px) {
+  .description .title  {
+    font-weight: 800;
+    font-size: 48px;
+  }
+
+  .description p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .description .title  {
+    font-weight: 800;
+    font-size: 28px;
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+}
+
+.buyBtn {
+  padding: 16px 42px !important;
+  border-radius: 8px !important;
+  background-color: #00FFD0 !important;
+  border-color: #00FFD0 !important;
+}
+
+.buyBtn span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000433;
+}
+
+.videoInfoButton {
+  justify-items: space-between;
+  align-items: center;
+}
+
+.bi-play-circle {
+  color: white;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.videoInfoText {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}

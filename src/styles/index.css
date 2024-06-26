@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Caros';
+	font-weight: 800;
+	src: url('../../public/fonts/Caros_ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-weight: 400;
+	src: url('../../public/fonts/manrope-regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-weight: 700;
+	src: url('../../public/fonts/manrope-bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-weight: 800;
+	src: url('../../public/fonts/manrope-extrabold.otf') format('opentype');
+}
+
+html, body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+}

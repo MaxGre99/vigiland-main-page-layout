@@ -1,0 +1,91 @@
+.wrapper-background {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	width: auto;
+	min-height: 100vh;
+	height: auto;
+	background: url('../../public/background.png') no-repeat center center;
+	background-size: contain;
+	position: absolute;
+}
+
+.modal-backdrop-blur {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(10px);
+	background: #00043333;
+	z-index: 1040;
+}
+
+.modal-dialog {
+	max-width: 100%;
+	margin: 0;
+}
+
+/* .transparent-modal-body {
+	background-color: rgba(0, 0, 0, 0.479); /* Прозрачность фона
+	border-radius: 0.3rem;
+	padding: 2rem;
+}
+
+.transparent-modal-header {
+	background-color: rgba(0, 0, 0, 0.479); /* Прозрачность фона
+	border-bottom: none;
+} */
+
+.menuBtn {
+	position: absolute;
+	color: white !important;
+	border-color: white;
+	left: 0px;
+	font-size: 24px !important;
+}
+
+.navbar {
+	justify-content: center !important;
+	border-bottom: 1px solid #d9d9d949;
+}
+
+.description {
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.descTexts {
+	flex-basis: 60vh;
+}
+
+.descBtns {
+	flex-direction: column;
+	align-items: center;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+  align-items: self-start;
+}
+
+.nav-link {
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	padding: 11px;
+	margin: 10px;
+  border: 3px solid transparent;
+}
+
+.nav-link :hover {
+  color: white;
+  border-bottom: 3px solid #00FFD0;
+}
+
+.menuModal {
+  flex-direction: column;
+  justify-content: space-between !important;
+}
