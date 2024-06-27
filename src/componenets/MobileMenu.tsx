@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Modal, Nav, Button } from 'react-bootstrap';
+import '../styles/mobileComponent.css'
 
 interface MobileMenuProps {
 	menuOn: boolean;
@@ -13,24 +14,22 @@ const MobileMenu: FC<MobileMenuProps> = ({
 	signInHandler,
 }) => {
 	return (
-		<Modal show={menuOn} onHide={menuHandler} fullscreen centered className='modal-backdrop-blur'>
-			<Modal.Header closeButton />
-			<Modal.Body className='d-flex menuModal'>
-				<Nav className='links'>
-					<Nav.Link href='#about'>О проекте</Nav.Link>
-					<Nav.Link href='#tokenomics'>Токеномика и NFT</Nav.Link>
-					<Nav.Link href='#roadmap'>Roadmap</Nav.Link>
-					<Nav.Link href='#docs'>Документы</Nav.Link>
-				</Nav>
-				<Button
-					className='d-flex signUpButton gradient-button'
-					variant='light'
-					onClick={signInHandler}>
-					<i className='bi bi-person'></i>
-					<span className='signUpText'>Войти в кабинет</span>
-				</Button>
-			</Modal.Body>
-		</Modal>
+		<div className='modal-backdrop-blur d-flex'>
+					<Nav className='links'>
+						<Button type='button' variant='transparent' onClick={menuHandler} className='menuCloseBtn'>x</Button>
+						<Nav.Link href='#about'>О проекте</Nav.Link>
+						<Nav.Link href='#tokenomics'>Токеномика и NFT</Nav.Link>
+						<Nav.Link href='#roadmap'>Roadmap</Nav.Link>
+						<Nav.Link href='#docs'>Документы</Nav.Link>
+					</Nav>
+					<Button
+						className='d-flex signUpButton transparent-button'
+						variant='light'
+						onClick={signInHandler}>
+						<i className='bi bi-person'></i>
+						<span className='signUpText'>Войти в кабинет</span>
+					</Button>
+		</div>
 	);
 };
 
