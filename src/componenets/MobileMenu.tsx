@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Modal, Nav, Button } from 'react-bootstrap';
+import React, { FC, useState } from 'react';
+import { Nav, Button } from 'react-bootstrap';
 import '../styles/mobileComponent.css'
 
 interface MobileMenuProps {
@@ -8,19 +8,23 @@ interface MobileMenuProps {
 	signInHandler: () => void;
 }
 
+const sidebarLinks = [{title: 'О проекте', href: '#about'}, {title: 'Токеномика и NFT', href: '#tokenomics'}, {title: 'Roadmap', href: '#roadmap'}, {title: 'Документы', href: '#docs'}];
+
 const MobileMenu: FC<MobileMenuProps> = ({
-	menuOn,
 	menuHandler,
 	signInHandler,
 }) => {
+	const [activeLink, setActiveLink] = useState('#about');
+
+	console.log(window.location.hash);
+	
 	return (
 		<div className='modal-backdrop-blur d-flex'>
 					<Nav className='links'>
 						<Button type='button' variant='transparent' onClick={menuHandler} className='menuCloseBtn'>x</Button>
-						<Nav.Link href='#about'>О проекте</Nav.Link>
-						<Nav.Link href='#tokenomics'>Токеномика и NFT</Nav.Link>
-						<Nav.Link href='#roadmap'>Roadmap</Nav.Link>
-						<Nav.Link href='#docs'>Документы</Nav.Link>
+						{sidebarLinks.map((link, index) => (
+							<Nav.Link key={index} href={link.href} className={`sidebarLink ${activeLink === link.href ? 'active' : ''}`} onClick={() => setActiveLink(link.href)}>{link.title}</Nav.Link>
+						))}
 					</Nav>
 					<Button
 						className='d-flex signUpButton transparent-button'

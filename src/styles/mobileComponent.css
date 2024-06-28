@@ -61,27 +61,36 @@
 }
 
 .transparent-button {
-	background: rgba(255, 255, 255, 0.589) !important;
+	background: rgba(158, 157, 157, 0.712) !important;
 	-webkit-backdrop-filter: blur(10px) !important;
 	backdrop-filter: blur(10px) !important;
+}
+
+.transparent-button > i {
+	color: white;
+}
+
+.transparent-button > span {
+	color: white;
 }
 
 .links {
 	display: flex;
 	flex-direction: column;
   align-items: self-start;
+	gap: 20px;
 }
 
-.nav-link {
+.sidebarLink {
 	font-size: 14px;
 	font-weight: bold !important;
 	color: white !important;
-	padding: 11px !important;
-	margin: 10px;
+	padding: 0px !important;
+	padding-bottom: 11px !important;
   border: 3px solid transparent !important;
 }
 
-.nav-link :hover {
+.active {
   color: white !important;
   border-bottom: 3px solid #00FFD0 !important;
 }
